@@ -1,18 +1,66 @@
 ﻿// See https://aka.ms/new-console-template for more 
 using System;
 using System.Diagnostics;
+using System.Net.Http.Headers;
 using System.Security.Cryptography.X509Certificates;
 
 
     namespace nauka1
     {
-        public class Delegaty   //https://www.p-programowanie.pl/c-sharp/delegaty
+    class Program
     {
-        public delegate void MojDelegat(string tekst);
-        public static void Main()
+        public static void Main(string[] args)
         {
-            Action<int, int> d1 = metoda;
-            d1(10, 10);
+            Thread w1 = new Thread(new ThreadStart(Watek.metoda));
+            w1.Start();
+            Thread.Sleep(3000);
+            new Thread(new ThreadStart(Watek.metoda)).Start();
+
+        }
+        public class Watek
+        {
+            public static void metoda()
+            {
+                int p = 0;
+                while (true)
+                {
+                    Thread.Sleep(500);
+                    p++;
+                    Console.WriteLine("licznik: " + p);
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //    public class Delegaty   //https://www.p-programowanie.pl/c-sharp/delegaty //Action,Func,Predicate
+    //{
+    //    public delegate void MojDelegat(string tekst);
+        //public static void Main()
+        //{
+            //Predicate<int> d1 = metoda;                                      
+            //Console.WriteLine("Wynik: " + d1(10));
+
+            //Func<int, int, int> d1 = metoda; //ostatni zwraca wartosc
+            //Console.WriteLine("Wynik: " + d1(15,4));
+
+
+            //Action<int, int> d1 = metoda;
+            //d1(10, 10);
 
 
             //MojDelegat d1 = new MojDelegat(Metoda1);
@@ -23,27 +71,27 @@ using System.Security.Cryptography.X509Certificates;
             //MojDelegat d3 = new MojDelegat(c1.Metoda3);
 
             //MojDelegat dele = d1 + d2;
-            
+
             //dele += d3;
-           
+
             //dele("test dodanych");
 
             //Console.WriteLine();
 
             //dele -= d2;
-            
+
             //dele("test"); //d1 + d2 + d3 - d2
 
             //d3.Invoke("test3");
-            
-            //metoda(d1); //wywolanie delegatu z parametrem
-           
-        }
 
-        static void metoda(int a, int b)
-        {
-            Console.WriteLine("Action: " + a);
-        }
+            //metoda(d1); //wywolanie delegatu z parametrem
+
+        //}
+
+        //static bool metoda(int a)
+        //{
+        //    return ((a + 10 ) == 10);
+        //}
 
         //static void metoda(MojDelegat del)
         //{
@@ -66,8 +114,7 @@ using System.Security.Cryptography.X509Certificates;
         //        Console.WriteLine("Metoda3: " + tekst);
         //    }
         }
-    }
-
+ //}
 
 
 
