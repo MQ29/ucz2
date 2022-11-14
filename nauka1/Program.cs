@@ -11,9 +11,13 @@ using System.Security.Cryptography.X509Certificates;
     {
         public static void Main(string[] args)
         {
+
             Thread w1 = new Thread(new ThreadStart(Watek.metoda));
+            Thread w2 = new Thread(new ThreadStart(Watek.metoda2));
             w1.Start();
-            Thread.Sleep(3000);
+            w1.Join(); //join wolamy dla tego ktory sie skonczyl, jest przedmiotem monitorowania
+           
+            //w1.Abort(); //nie dziala na tej wersji
             new Thread(new ThreadStart(Watek.metoda)).Start();
 
         }
@@ -22,10 +26,27 @@ using System.Security.Cryptography.X509Certificates;
             public static void metoda()
             {
                 int p = 0;
-                while (true)
+                try
+                {
+                    while (p < 10)
+                    {
+                        Thread.Sleep(500);
+                        p++;
+                        Console.WriteLine("licznik: " + p);
+
+                    }
+                } catch (ThreadAbortException)
+                {
+                    Console.WriteLine("zatrzymano watek");
+                }
+            }
+            public static void metoda2()
+            {
+                int p = 0;
+                while (p < 20)
                 {
                     Thread.Sleep(500);
-                    p++;
+                    p += 2;
                     Console.WriteLine("licznik: " + p);
 
                 }
@@ -47,7 +68,7 @@ using System.Security.Cryptography.X509Certificates;
 
 
 
-    //    public class Delegaty   //https://www.p-programowanie.pl/c-sharp/delegaty //Action,Func,Predicate
+    //    public class Delegaty   //https://www.p-programowanie.pl/c-sharp/delegaty //Action,Func,Predicate,wątki
     //{
     //    public delegate void MojDelegat(string tekst);
         //public static void Main()
