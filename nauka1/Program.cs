@@ -6,18 +6,65 @@ using System.Security.Cryptography.X509Certificates;
 
     namespace nauka1
     {
-        public class Delegaty
+        public class Delegaty   //https://www.p-programowanie.pl/c-sharp/delegaty
     {
         public delegate void MojDelegat(string tekst);
         public static void Main()
         {
-            MojDelegat d1 = new MojDelegat(Metoda1);
-            d1("test");
+            Action<int, int> d1 = metoda;
+            d1(10, 10);
+
+
+            //MojDelegat d1 = new MojDelegat(Metoda1);
+            //d1("test");
+
+            //MojDelegat d2 = new MojDelegat(Metoda2);
+            //d2("test2");
+            //MojDelegat d3 = new MojDelegat(c1.Metoda3);
+
+            //MojDelegat dele = d1 + d2;
+            
+            //dele += d3;
+           
+            //dele("test dodanych");
+
+            //Console.WriteLine();
+
+            //dele -= d2;
+            
+            //dele("test"); //d1 + d2 + d3 - d2
+
+            //d3.Invoke("test3");
+            
+            //metoda(d1); //wywolanie delegatu z parametrem
            
         }
-        public static void Metoda1(String tekst)
+
+        static void metoda(int a, int b)
         {
-            Console.WriteLine("Metoda1: " + tekst);
+            Console.WriteLine("Action: " + a);
+        }
+
+        //static void metoda(MojDelegat del)
+        //{
+        //    del("z paramterem");
+        //}
+        //public static void Metoda1(String tekst)
+        //{
+        //    Console.WriteLine("Metoda1: " + tekst);
+        //}
+
+        //public static void Metoda2(String tekst)
+        //{
+        //    Console.WriteLine("Metoda2: " + tekst);
+        //}
+
+        //public class c1
+        //{
+        //    public static void Metoda3(String tekst)
+        //    {
+        //        Console.WriteLine("Metoda3: " + tekst);
+        //    }
         }
     }
 
@@ -93,7 +140,7 @@ using System.Security.Cryptography.X509Certificates;
 
     //        }
     //    }
-    }
+    //}
 
 
 
