@@ -14,15 +14,17 @@ using System.Security.Cryptography.X509Certificates;
 
             Thread w1 = new Thread(new ThreadStart(Watek.metoda));
             Thread w2 = new Thread(new ThreadStart(Watek.metoda2));
+            Thread w3 = new Thread(new ThreadStart(Watek.metoda3));
             w1.Start();
             w1.Join(); //join wolamy dla tego ktory sie skonczyl, jest przedmiotem monitorowania
            
             //w1.Abort(); //nie dziala na tej wersji
-            new Thread(new ThreadStart(Watek.metoda)).Start();
+            
 
         }
         public class Watek
         {
+            static readonly object obj = new object();
             public static void metoda()
             {
                 int p = 0;
@@ -50,6 +52,20 @@ using System.Security.Cryptography.X509Certificates;
                     Console.WriteLine("licznik: " + p);
 
                 }
+            }
+            public static void metoda3()
+            {
+                int p = 0;
+                lock (obj)
+                {
+                    while(p<10)
+                    {
+                        Thread.Sleep(500);
+                        p++;
+                        Console.WriteLine("licznik: " + p);
+                    }
+                }
+
             }
         }
     }
