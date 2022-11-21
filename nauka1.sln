@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nauka1", "nauka1\nauka1.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nauka2", "nauka2\nauka2.csproj", "{8167F933-DFBF-4436-A724-0746BA7ACD2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21.11", "21.11\21.11.csproj", "{1245E94C-6923-467D-9364-D37A81152BAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8167F933-DFBF-4436-A724-0746BA7ACD2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8167F933-DFBF-4436-A724-0746BA7ACD2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8167F933-DFBF-4436-A724-0746BA7ACD2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1245E94C-6923-467D-9364-D37A81152BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1245E94C-6923-467D-9364-D37A81152BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1245E94C-6923-467D-9364-D37A81152BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1245E94C-6923-467D-9364-D37A81152BAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

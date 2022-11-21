@@ -85,6 +85,7 @@ class Program
         public int rocznik;
 
     }
+
 }
 
 

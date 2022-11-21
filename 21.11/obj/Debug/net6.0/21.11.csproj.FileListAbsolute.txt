@@ -1,0 +1,15 @@
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\obj\Debug\net6.0\21.11.csproj.AssemblyReference.cache
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\obj\Debug\net6.0\21.11.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\obj\Debug\net6.0\21.11.AssemblyInfoInputs.cache
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\obj\Debug\net6.0\21.11.AssemblyInfo.cs
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\obj\Debug\net6.0\21.11.csproj.CoreCompileInputs.cache
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\bin\Debug\net6.0\21.11.exe
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\bin\Debug\net6.0\21.11.deps.json
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\bin\Debug\net6.0\21.11.runtimeconfig.json
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\bin\Debug\net6.0\21.11.dll
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\bin\Debug\net6.0\21.11.pdb
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\obj\Debug\net6.0\21.11.dll
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\obj\Debug\net6.0\refint\21.11.dll
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\obj\Debug\net6.0\21.11.pdb
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\obj\Debug\net6.0\21.11.genruntimeconfig.cache
+D:\Users\mateusz.lukaszewicz\source\repos\nauka1\21.11\obj\Debug\net6.0\ref\21.11.dll
